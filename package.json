@@ -1,0 +1,43 @@
+{
+    "author": "pichlmeier.sebastian@gmail.com",
+    "dependencies": {
+        "pebble-clay": "^1.0.3"
+    },
+    "keywords": [],
+    "name": "neocc",
+    "pebble": {
+        "capabilities": [
+            "configurable"
+        ],
+        "displayName": "NEOCC",
+        "enableMultiJS": true,
+        "messageKeys": [
+            "TRIGGER",
+            "JSREADY",
+            "EVENTS"
+        ],
+        "projectType": "native",
+        "resources": {
+            "media": [
+                {
+                    "file": "images/CC_BLACK",
+                    "menuIcon": true,
+                    "name": "CC_BLACK",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                }
+            ]
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk"
+        ],
+        "uuid": "4c0f60ad-6a6e-4e8b-bf57-66b8f297de04",
+        "watchapp": {
+            "watchface": false
+        }
+    },
+    "version": "1.0.0"
+}
