@@ -28,6 +28,9 @@ static void inbox_received_callback(DictionaryIterator *iter, void *context) {
   if(js_tuple) {
     APP_LOG(APP_LOG_LEVEL_DEBUG, "Receive js-ready message");
     s_js_ready = true;
+    menu_layer_set_normal_colors(s_menu_layer, GColorWhite, GColorBlack);
+    menu_layer_set_highlight_colors(s_menu_layer, GColorPictonBlue, GColorBlack);    
+    menu_layer_reload_data(s_menu_layer);
   }
   Tuple *events_tuple = dict_find(iter, MESSAGE_KEY_EVENTS);
   if(events_tuple) {
@@ -155,8 +158,8 @@ static void main_window_load(Window *window) {
     .draw_row = menu_draw_row_callback,
     .select_click = menu_select_callback,
   });
-  menu_layer_set_normal_colors(s_menu_layer, GColorWhite, GColorBlack);
-  menu_layer_set_highlight_colors(s_menu_layer, GColorPictonBlue, GColorBlack);
+  menu_layer_set_normal_colors(s_menu_layer, GColorWhite, GColorLightGray);
+  menu_layer_set_highlight_colors(s_menu_layer, GColorVeryLightBlue, GColorLightGray);
 
   // Bind the menu layer's click config provider to the window for interactivity
   menu_layer_set_click_config_onto_window(s_menu_layer, window);
