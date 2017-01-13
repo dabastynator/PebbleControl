@@ -158,8 +158,8 @@ static void main_window_load(Window *window) {
     .draw_row = menu_draw_row_callback,
     .select_click = menu_select_callback,
   });
-  menu_layer_set_normal_colors(s_menu_layer, GColorWhite, GColorLightGray);
-  menu_layer_set_highlight_colors(s_menu_layer, GColorPictonBlue, GColorLightGray);
+  menu_layer_set_normal_colors(s_menu_layer, GColorWhite, GColorDarkGray);
+  menu_layer_set_highlight_colors(s_menu_layer, GColorPictonBlue, GColorDarkGray);
 
   // Bind the menu layer's click config provider to the window for interactivity
   menu_layer_set_click_config_onto_window(s_menu_layer, window);
