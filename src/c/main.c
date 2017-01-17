@@ -171,6 +171,14 @@ static void main_window_load(Window *window) {
   app_message_register_inbox_dropped(inbox_dropped_callback);
   app_message_register_outbox_sent(outbox_sent_callback);
   app_message_register_outbox_failed(outbox_failed_callback);
+  
+  // Send dummy message to wakeup companion app
+  DictionaryIterator *iter;
+  AppMessageResult result = app_message_outbox_begin(&iter);
+  if(result == APP_MSG_OK) {
+    dict_write_cstring(iter, MESSAGE_KEY_TRIGGER, "");
+    result = app_message_outbox_send();
+  }
 }
 
 static void main_window_unload(Window *window) {
