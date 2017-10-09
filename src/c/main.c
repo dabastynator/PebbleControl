@@ -1,8 +1,7 @@
 #include "pebble.h"
 
 #define NUM_MENU_SECTIONS 1
-#define NUM_MENU_ICONS 3
-#define NUM_FIRST_MENU_ITEMS 3
+#define NUM_FIRST_MENU_ITEMS 4
 #define NUM_SECOND_MENU_ITEMS 1
 
 static Window *s_main_window;
@@ -12,8 +11,8 @@ static bool s_js_ready;
 const uint32_t inbox_size = 64;
 const uint32_t outbox_size = 256;
 
-static char* menu_title[3] = {"Come home", "Leaving", "Go to bed"};
-static char* menu_subtitle[3] = {"mobile.come_home", "mobile.leaving", "mobile.go_to_bed"};
+static char* menu_title[4] = {"Come home", "Leaving", "Go to bed", "Bedroom"};
+static char* menu_subtitle[4] = {"mobile.come_home", "mobile.leaving", "mobile.go_to_bed", "mobile.bedroom"};
 
 /*
 * Communication listener and implementation
